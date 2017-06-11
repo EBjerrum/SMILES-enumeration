@@ -19,6 +19,10 @@ s = get_mol_set('CCCC', tries=50, split=False)
 
 Please note that it currently strips all stereo information.
 
+## Blog post
+
+I wrote a blog post regarding [SMILES enumeration](http://www.wildcardconsulting.dk/useful-information/smiles-enumeration-as-data-augmentation-for-molecular-neural-networks/)
+
 
 ## Bibliography
 
