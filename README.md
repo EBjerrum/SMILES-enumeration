@@ -2,7 +2,7 @@
 SMILES enumeration for QSAR modelling using LSTM recurrent neural networks
 
 
-#Example usage
+## Example usage
 See the if __name__ == "__main__": example in SMILES_enumeration.py
 
 to use in own scripts
@@ -17,6 +17,12 @@ canonical, s = get_mol_set('CCCC', tries=50)
 s = get_mol_set('CCCC', tries=50, split=False)
 ```
 
+Please note that it currently strips all stereo information.
+
+
+## Bibliography
+
+Please cite: [SMILES enumeration as Data Augmentation for Network Modeling of Molecules](https://arxiv.org/abs/1703.07076)
 
 ```bibtex
 @article{DBLP:journals/corr/Bjerrum17,
