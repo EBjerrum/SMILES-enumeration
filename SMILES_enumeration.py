@@ -24,7 +24,7 @@ def get_mol_set(smile, tries=10000, split=True):
 	s.add(canonical)
 	for i in range(tries):
 		s.add(randomize_smile(smile))
-	print "total %s found"%(len(s))
+	print ("total %s found"%(len(s)))
 	if split:
 		s.remove(canonical)
 		return canonical, s
@@ -32,20 +32,20 @@ def get_mol_set(smile, tries=10000, split=True):
 		return s
 			
 if __name__ == "__main__":
-	print "Test with toluene"
+	print ("Test with toluene")
 	canonical, s = get_mol_set('Cc1ccccc1', tries=1000)
-	print "Canonical", canonical
-	print "Enumerated set", s
-	print
-	print "Test with salisylic acid"
+	print ("Canonical", canonical)
+	print ("Enumerated set", s)
+	print ()
+	print ("Test with salisylic acid")
 	canonical, s = get_mol_set('c1cccc(O)c1C(=O)O', tries=1000)
-	print "Canonical Smile: %s"%canonical
-	print "Other smiles: %s"%s
-	print
-	print "Test with Alanine, Strips stereo information"
+	print ("Canonical Smile: %s"%canonical)
+	print ("Other smiles: %s"%s)
+	print ()
+	print ("Test with Alanine, Strips stereo information")
 	canonical, s = get_mol_set('C[C@@H](C(=O)O)N', tries=1000)
-	print "Canonical Smile: %s"%canonical
-	print "Other smiles: %s"%s
+	print ("Canonical Smile: %s"%canonical)
+	print ("Other smiles: %s"%s)
 
 
 	

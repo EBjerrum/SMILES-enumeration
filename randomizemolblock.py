@@ -21,7 +21,7 @@ def RandomizeMolBlock(molB):
 	for i in order: 
 		res.append(atLines[i]) 
    
-	#print 'ORDER:',order 
+	#print ('ORDER:',order)
 	idx += nAts 
 	for i in range(nBonds): 
 		inL = splitB[idx] 
@@ -41,7 +41,7 @@ def RandomizeMolBlock(molB):
 			col = line[0:9]
 			for i in range(3,len(chargeline),2):
 				col = col +"%4i%4i"%(order.index(int(chargeline[i])-1)+1,int(chargeline[i+1])+1)
-			#print col
+			#print (col)
 			res.append(col)
 
 	res.append('M  END') 
