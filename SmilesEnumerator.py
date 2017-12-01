@@ -1,4 +1,4 @@
-#Experimental Class for Smiles Enumeration
+#Experimental Class for Smiles Enumeration, Iterator and SmilesIterator adapted from Keras 1.2.2
 from rdkit import Chem
 import numpy as np
 import threading
