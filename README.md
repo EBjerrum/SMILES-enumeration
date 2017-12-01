@@ -411,6 +411,10 @@ _ = plt.hist(y_pred)
 
 ![png](README_files/README_31_1.png)
 
+## Blog post
+
+I wrote a blog post regarding [SMILES enumeration](http://www.wildcardconsulting.dk/useful-information/smiles-enumeration-as-data-augmentation-for-molecular-neural-networks/)
+
 
 ## Bibliography
 
