@@ -178,11 +178,20 @@ class SmilesEnumerator(object):
         """
         one_hot =  np.zeros((smiles.shape[0], self.pad, self._charlen),dtype=np.int8)
         
-        for i,ss in enumerate(smiles):
-            if self.enumerate: ss = self.randomize_smiles(ss)
-            for j,c in enumerate(ss):
-                one_hot[i,j,self._char_to_int[c]] = 1
-        return one_hot
+        if self.leftpad:
+            for i,ss in enumerate(smiles):
+                if self.enumerate: ss = self.randomize_smiles(ss)
+                l = len(ss)
+                diff = self.pad - l
+                for j,c in enumerate(ss):
+                    one_hot[i,j+diff,self._char_to_int[c]] = 1
+            return one_hot
+        else:
+            for i,ss in enumerate(smiles):
+                if self.enumerate: ss = self.randomize_smiles(ss)
+                for j,c in enumerate(ss):
+                    one_hot[i,j,self._char_to_int[c]] = 1
+            return one_hot
 
       
     def reverse_transform(self, vect):
