@@ -5,6 +5,8 @@
 
 SMILES enumeration is the process of writing out all possible SMILES forms of a molecule. It's a useful technique for data augmentation before sequence based modeling of molecules. You can read more about the background in this [blog post](https://www.wildcardconsulting.dk/useful-information/smiles-enumeration-as-data-augmentation-for-molecular-neural-networks/) or [this preprint on arxiv.org](https://arxiv.org/abs/1703.07076)
 
+NOTE: Theres a more updated package available at [https://github.com/EBjerrum/molvecgen](https://github.com/EBjerrum/molvecgen)
+
 Import the SmilesEnumerator and instantiate the object
 
 
