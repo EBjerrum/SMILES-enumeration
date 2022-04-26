@@ -3,7 +3,7 @@
 # SMILES enumeration, vectorization and batch generation
 
 [![Smiles Enumeration
-Header](README_files/f467ed21a7e815cdf8a9c29fa75b3ebc12878a74.png)](https://www.wildcardconsulting.dk/useful-information/smiles-enumeration-as-data-augmentation-for-molecular-neural-networks/)
+Header](README_files/README_files/f467ed21a7e815cdf8a9c29fa75b3ebc12878a74.png)](https://www.cheminformania.com/useful-information/smiles-enumeration-as-data-augmentation-for-molecular-neural-networks/)
 
 </div>
 
