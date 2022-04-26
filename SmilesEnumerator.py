@@ -218,35 +218,35 @@ if __name__ == "__main__":
     sm_en.fit(smiles, extra_chars=["\\"])
     v = sm_en.transform(smiles)
     transformed = sm_en.reverse_transform(v)
-    if len(set(transformed)) > 2: print "Too many different canonical SMILES generated"
+    if len(set(transformed)) > 2: print("Too many different canonical SMILES generated")
     
     #Test enumeration 
     sm_en.canonical = False
     sm_en.enumerate = True
     v2 = sm_en.transform(smiles)
     transformed = sm_en.reverse_transform(v2)
-    if len(set(transformed)) < 3: print "Too few enumerated SMILES generated"
+    if len(set(transformed)) < 3: print("Too few enumerated SMILES generated")
 
     #Reconstruction
     reconstructed = sm_en.reverse_transform(v[0:5])
     for i, smile in enumerate(reconstructed):
         if smile != smiles[i]:
-            print "Error in reconstruction %s %s"%(smile, smiles[i])
+            print("Error in reconstruction %s %s"%(smile, smiles[i]))
             break
     
     #test Pandas
     import pandas as pd
     df = pd.DataFrame(smiles)
     v = sm_en.transform(df[0])
-    if v.shape != (20, 52, 18): print "Possible error in pandas use"
+    if v.shape != (20, 52, 18): print("Possible error in pandas use")
     
     #BUG, when batchsize > x.shape[0], then it only returns x.shape[0]!
     #Test batch generation
     sm_it = SmilesIterator(smiles, np.array([1,2]*10), sm_en, batch_size=10, shuffle=True)
     X, y = sm_it.next()
     if sum(y==1) - sum(y==2) > 1:
-        print "Unbalanced generation of batches"
-    if len(X) != 10: print "Error in batchsize generation"     
+        print("Unbalanced generation of batches")
+    if len(X) != 10: print("Error in batchsize generation")
 
 
 
