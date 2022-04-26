@@ -8,7 +8,7 @@ sm_it = SmilesIterator(smiles, np.array([1,2]*100), sm_en, batch_size=128, shuff
 """
 command = """X,y = sm_it.next()"""
 
-print timeit.timeit(command, number=100, setup=setup)/100
+print(timeit.timeit(command, number=100, setup=setup)/100)
 #Approximate 43ms pr. 128
 
 
